@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;800&display=swap');
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f5f5dc;
+}
+.events{
+    width: 90%;
+    display: flex; /* Enable flexbox */
+    flex-direction: column; /* Arrange children in a column */
+    align-items: center; /* Center children horizontally */
+    margin: 0 auto; /* Center the container itself */
+}
+.event-card {
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 20px;
+    width: 90%; 
+    box-shadow: 2px 2px 12px #0000001a;
+}
+.event-card img {
+    width: 70%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+.event-card h2 {
+    text-align: center;
+    margin: 10px 0;
+}
+.event-card p {
+    text-align: center;
+}
+.event-card h3 {
+    margin: 5px 0;
+}
+.event-card .buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+.delete-button {
+    background-color: red; /* Red background */
+    color: white; /* White text */
+    border: none; /* No border */
+    padding: 10px 15px; /* Padding */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+}
+.update-button, .button-adding {
+    background-color: green; /* Green background */
+    color: white; /* White text */
+    border: none; /* No border */
+    padding: 10px 15px; /* Padding */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+}
+.delete-button:hover {
+    background-color: darkred; /* Darker red on hover */
+}
+.update-button:hover {
+    background-color: darkgreen; /* Darker green on hover */
+}
+.buttondiv{
+    display: flex;
+    justify-content: flex-end;
+}

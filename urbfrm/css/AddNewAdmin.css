@@ -1,0 +1,282 @@
+/* now insert google fonts here */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;800&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+}
+
+/*--------------this is the background----------------*/
+body{
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    position: relative;
+    margin: 0;
+}
+nav{
+    background: darkgreen;
+    height: 80px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 5%;
+}
+label.logo{
+    width: 170px;
+    color: #fff;
+    font-size: 17px;
+    line-height: 20px;
+    padding: 10px;
+    font-weight: bold;
+}
+.logo img{
+    height: 15vh;
+    width: auto;
+    margin-right: 20px;
+}
+nav ul{
+    list-style: none;
+    display: flex;
+}
+nav ul li{
+    padding: 3px 10px;
+    position: relative;
+}
+.active, nav ul li:hover{
+    border-bottom: 0px solid;
+    color: #fff;
+}
+
+nav ul li a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 17px;
+    text-transform: uppercase;
+    transition: all .3s linear;
+}
+nav ul li a:hover{
+    border-bottom: 2px solid;
+    color: #fff;
+}
+
+.dropdown_menu{
+    display: none;
+}
+
+nav ul li:hover .dropdown_menu{
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    background-color: darkgreen
+}
+.dropdown_menu ul{
+    display: block;
+    margin: 10px;
+}
+.dropdown_menu ul li{
+    width: 175px;
+    padding: 3px;
+}
+.fas{
+    float: right;
+    margin-left: 10px;
+    padding-top: 3px;
+}
+
+.dropdown_menu1{
+    display: none;
+}
+
+nav ul li:hover .dropdown_menu1{
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    background-color: darkgreen
+}
+.dropdown_menu1 ul{
+    display: block;
+    margin: 10px;
+}
+.dropdown_menu1 ul li{
+    width: 175px;
+    padding: 3px;
+}
+.fas{
+    float: right;
+    margin-left: 10px;
+    padding-top: 3px;
+}
+
+.dropdown_menu2{
+    display: none;
+}
+
+nav ul li:hover .dropdown_menu2{
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    background-color: darkgreen
+}
+.dropdown_menu2 ul{
+    display: block;
+    margin: 10px;
+}
+.dropdown_menu2 ul li{
+    width: 175px;
+    padding: 3px;
+}
+.fas{
+    float: right;
+    margin-left: 10px;
+    padding-top: 3px;
+}
+
+.checkbtn{
+    font-size: 30px;
+    color: #fff;
+    float: right;
+    line-height: 60px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+#check{
+    display: none;
+}
+@media (max-width: 990px){
+    label.logo{
+        position: flex;
+        font-size: 20px;
+        padding-left: 30px;
+    }
+    nav ul li a{
+        font-size: 15px;
+    }
+}
+@media (max-width: 890px){
+    .checkbtn{
+        display: flex;
+    }
+    ul{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: darkolivegreen;
+        top: 60px;
+        left: -200%;
+        text-align: center;
+        transition: all .5s;
+    }
+    nav ul li{
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+    nav ul li a{
+        font-size: 20px;
+    }
+    a:hover,a.active{
+        background: none;
+        color: #00ff80;
+    }
+    #check:checked ~ ul{
+        left: 0;
+    }
+}
+
+section{
+    display: block;
+    height: 100vh;
+}
+
+form {
+    display: flex;
+    height: 85vh;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+form .user-details{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 20px 0 12px 0;
+}
+form .form-group label {
+    display: block;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+form .user-details .form-group input {
+    height: 45px;
+    width: 100%;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding-left: 5px;
+    font-size: 10px;
+    border-bottom-width: 2px;
+    transition: all .3s ease;
+}
+form .user-details .form-group {
+    margin-bottom: 15px;
+    width: calc(100% / 2 - 38px);
+}
+
+input[type="text"],
+input[type="tel"],
+input[type="email"],
+input[type="date"],
+textarea {
+  width: 100%;
+  padding: 4px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box; /* Include padding in width */
+}
+
+button[type="submit"] {
+  background-color: #4CAF50; /* Green */
+  color: white;
+  width: 50%;
+  position: relative;
+  left: 25%;
+  padding: 5px;
+  font-size: 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+button[type="submit"]:hover {
+    background: darkgreen;
+}
+
+.image-upload {
+  width: 150px;
+  height: 150px;
+  border: 1px dashed #ccc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.image-upload input[type="file"] {
+  display: none;
+}
+
+.image-upload label {
+  cursor: pointer;
+}
+h1 {
+    position: absolute;
+    top: 11%;
+    left: 2%;
+}

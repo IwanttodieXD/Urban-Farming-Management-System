@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;800&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins',sans-serif;
+}
+
+body{
+    min-height: 0vh;
+}
+nav{
+    background-color: darkgreen;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
+}
+nav ul{
+    display: flex;
+    width: 100%;
+    list-style: none;
+    justify-content: flex-end;
+    align-items: center;
+}
+nav li{
+height: 75px;
+}
+nav a{
+    height: 100%;
+    padding: 0 30px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    color: white;
+    font-size: 25px;
+}
+nav a:hover{
+background-color: darkseagreen;
+}
+nav li:first-child{
+    margin-right: auto;
+}
+.sidebar{
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 250px;
+    z-index: 999;
+    background-color: #017001;
+    backdrop-filter: blur(10px);
+    box-shadow: -10px 0 rgba(0, 0, 0, 0.1);
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+.sidebar li{
+    width: 100%;
+}
+.sidebar a{
+    width: 100%;
+}
+.menu-button{
+    display: none;
+}
+
+@media(max-width: 800px ){
+    .hideOnMobile{
+        display: none;
+    }
+    .menu-button{
+    display: block;
+    }
+}
+@media(max-width: 400px){
+    .sidebar{
+        width: 100%;
+    }
+}
+.dropdown {
+    display: none; 
+    position: absolute;
+    background-color: hsla(120, 100%, 20%, 0.801); 
+    min-width: 75px; 
+    z-index: 1; 
+}
+.dropdown a {
+    display:block;
+    padding: 12px 18px; 
+}
+li:hover .dropdown {
+    display: block; 
+    color: hsla(120, 98%, 24%, 0.801); ;
+}
+
+a:is(:link, :active, :visited).active {
+color:darkgreen;
+background-color: White;
+}

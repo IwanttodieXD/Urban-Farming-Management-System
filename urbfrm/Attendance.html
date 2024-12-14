@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attendance</title>
+    <link rel="stylesheet" href="css/navstyle.css">
+    <link rel="stylesheet" href="css/tool.css">
+    <script src="https://kit.fontawesome.com/932507f259.js" crossorigin="anonymous"></script>
+    <script src="javascript/attendannce.js"></script>
+</head>
+<body>
+    <div>
+    <header>
+        <div class="info-container">
+            <div class="text">Quezon City University - Center for Urban and Agriculture Innovation</div>
+            <img src="/urbfrm/img/urban farming logo 3.png" alt="Logo" class="info-image">
+        </div>
+        
+        <div class="contentss">
+            <div class="location">
+                Attendance / <span class="currentlocation"></span>
+            </div>
+        </div>
+    </header>
+    <div>
+        <img src="/urbfrm/img/urban farming logo 3.png" alt="LOGO">
+            <br><br>
+            <div id="datetime"></div>
+            <br><br>
+            <form action="/urbfrm/php/attendance.php" method="POST">
+            <button class="buttonattend" name="timein" type="submit">Time In</button>
+            <button class="btntimeout" name="timeout" type="submit">Time Out</button>
+            </div>
+            <script> 
+                document.getElementById('buttonattend').addEventListener('click', function() {
+                    alert('You have timed in successfully! :D');
+                });
+                document.getElementById('buttontimeout').addEventListener('click', function() {
+                    alert('You have timed out successfully! :D \nDont forget to LOGOUT.');
+                });
+            </script>
+            </form>
+        </div>
+        <!--Hindi ko na alam-->
+</body>
+</html>

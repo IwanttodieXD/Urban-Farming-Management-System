@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+    <link rel="stylesheet" href="css/event.css">
+    <link rel="stylesheet" href="css/addevent.css">
+    <link rel="stylesheet" href="css/header.css">
+</head>
+<body>
+    <header>
+        <div class="info-container">
+            <div class="text">Quezon City University - Center for Urban and Agriculture Innovation</div>
+            <img src="img/urban farming logo 3.png" alt="Logo" class ="info-image">
+        </div>
+        
+        <div class="content">
+            <div class="location">
+                Events / <span class="currentlocation"></span>
+            </div>
+        </div>
+    </header>
+    
+    <div class="addcontainer">
+        <a id="addEventButton" href="#" class="button button-add">Add Event</a>
+    </div>
+    
+    
+<div id="event-container" class="events"></div>
+
+<script>
+    // Sample data fetched from a database
+    const events = [
+        {
+            image: 'https://via.placeholder.com/150',
+            title: 'Event Title 1',
+            description: 'This is a description of event 1.',
+            date: '2023-10-01',
+            time: '10:00 AM',
+            links: 'http://example.com/event1'
+        },
+        {
+            image: 'https://via.placeholder.com/150',
+            title: 'Event Title 2',
+            description: 'This is a description of event 2.',
+            date: '2023-10-02',
+            time: '11:00 AM',
+            links: 'http://example.com/event2'
+        }
+    ];
+
+    const container = document.getElementById('event-container');
+
+    events.forEach(event => {
+        const eventCard = document.createElement('div');
+        eventCard.classList.add('event-card');
+
+        eventCard.innerHTML = `
+            <img src="${event.image}" alt="${event.title}">
+            <h2>${event.title}</h2>
+            <p>${event.description}</p>
+            <h3>Date: ${event.date}</h3>
+            <h3>Time: ${event.time}</h3>
+            <h3>Links: <a href="${event.links}" target="_blank">${event.links}</a></h3>
+            <div class="buttons">
+                <button class="delete-button" onclick="deleteEvent('${event.title}')">Delete</button>
+                <button class="update-button" onclick="updateEvent('${event.title}')">Update</button>
+            </div>
+        `;
+
+        container.appendChild(eventCard);
+    });
+
+    function deleteEvent(title) {
+        alert(`Delete event: ${title}`);
+        // Implement delete logic here
+    }
+
+    function updateEvent(title) {
+        alert(`Update event: ${title}`);
+        // Implement update logic here
+    }
+</script>
+<!--pag add lang ng events nakalagay dine since yung action sa delete and update dapat dynamically created din pero hindi ko sure kay pogi siya gumawa nyan eh-->
+<!--Or wag na silang mag edit, dapat perfectionist sila-->
+<div class="overlay" id="overlay"></div>
+<div class="addform" id="addForm" style="display: none;">
+    <form class="form-container" id="eventForm">
+        <div class="upload-section">
+            <div class="upload-box">
+                <label for="image-upload">Upload An Image</label>
+                <input type="file" id="image-upload" accept="image/*">
+            </div>
+        </div>
+        <div class="details-section">
+            <input type="text" placeholder="Event Title" class="input-box" required>
+            <textarea placeholder="Description of the Event" class="input-box" rows="4" required></textarea>
+            <div class="row">
+                <input type="text" placeholder="Where" class="input-box half" required>
+                <input type="date" placeholder="Date" class="input-box half" required>
+            </div>
+            <div class="row">
+                <input type="time" placeholder="Time" class="input-box half" required>
+                <input type="url" placeholder="Attendance Link" class="input-box half" required>
+            </div>
+            <input type="url" placeholder="Feedback Link" class="input-box half">
+            <div class="buttons">
+                <button type="submit" class="button button-done">Done</button>
+                <a href="events.html" class="button button-cancel">Cancel</a>
+            </div>
+        </div>
+    </form>
+</div>
+
+    <script src="javascript/events.js"></script>
+</body>
+</html>

@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Personnel</title>
+    <link rel="stylesheet" href="../css/addpersonnel.css">
+    <link rel="stylesheet" href="../css/header.css">
+    <script src="https://kit.fontawesome.com/932507f259.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../css/navstyle.css">
+    <link rel="stylesheet" href="../css/tool.css">
+    <link rel="stylesheet" href="../css/header.css">
+    <script src="https://kit.fontawesome.com/932507f259.js" crossorigin="anonymous"></script>
+    <script src="../javascript/dropdown.js"></script>
+    <script src="../javascript/otherPlants.js"></script>
+    <script src="../javascript/showforms.js"></script>
+    <script src="../javascript/attendannce.js"></script>
+</head>
+<body>
+    <div class="sidebar">
+        <div class="sidebar-content">
+            <ul class="nav-items"> 
+                <li class="logo-item">
+                    <img class="logo" src="../img/urban farming logo 3.png" alt="logo">
+                </li>
+                <li>
+                    <i class="fa-regular fa-calendar-check"></i><a href="Landing_Admin.html" class="item-text">Attendance</a>
+                </li>
+                <li>
+                    <i class="fas fa-people-group"></i><span class="item-text">Human Resources</span>
+                </li>
+                <ul class="sub-hr" style="display: none;">
+                    <li><i class="fa-regular fa-address-book"></i><a href="PersonnelList.php" class="item-text">Employee List</a><i></i></li>
+                    <li><i class="fas fa-user-plus"></i><a href="Personnel_Add.html" class="item-text">Add Personnel</a></li>
+                    <li><i class="fas fa-file-pen"></i><a href="Leave_Approval.php" class="item-text">Leave Application</a></li>
+                    <li><i class="fa-regular fa-calendar-check"></i><a href="AttendanceSummary.php" class="item-text">Attendance Summary</a></li>
+                    
+                </ul>
+                <li>
+                    <i class="fas fa-warehouse"></i><span class="item-text">Inventory</span>
+                </li>
+                <ul class="sub-inv" style="display: none;"> 
+                    <li><i class="fas fa-trowel"></i><a href="Admin_InvTools.php" class="item-text" >Tools</a></li>
+                    <li><i class="fas fa-sack-xmark"></i><a href="Admin_InvPotMix.php" class="item-text">Pot Mix</a></li>
+                    <li><i class="fa-regular fa-clipboard"></i><a href="Records_Tool.php" class="item-text">Tools Records</a></li>
+                    <li><i class="fa-regular fa-clipboard"></i><a href="Records_PotMix.php" class="item-text">Inventory Records</a></li>
+                </ul>
+                <li>
+                    <i class="fas fa-seedling"></i><span class="item-text">Plants</span>
+                </li>
+                <ul class="sub-plants" style="display: none;"> 
+                    <li><i class="fas fa-apple-whole"></i><a href="Plants_Records.php" class="item-text">Plant Records</a></li>
+                </ul>
+                <li><i class="fa-regular fa-calendar"></i><a href="Events_Manage.php" class="item-text">Events</a></li>
+            </ul>
+            <li class="last"><i class="fas fa-right-from-bracket"></i><a href="/urbfrm/landing_main.php" action="/urbfrm/php/sessionend.php" class="item-text">Log Out</a></li> <!-- Last item outside the wrapper -->
+        </div>
+    </div>
+
+    <div id="content">
+    <header>
+        <div class="info-container">
+            <div class="text">Quezon City University - Center for Urban and Agriculture Innovation</div>
+            <img src="../img/urban farming logo 3.png" alt="Logo" class="info-image">
+        </div>
+        
+        <div class="content">
+            <div class="location">
+                Add Personnel / <span class="currentlocation">Human Resources</span>
+            </div>
+        </div>
+    </header>
+    <form action="../php/addpersonnel.php" method="POST" enctype="multipart/form-data"> <!--nagtest lang ang bading-->
+        <div class="upload-section">
+            <div class="upload-box">
+                <label for="image-upload">Upload Image</label>
+                <input type="file" id="image-upload" name="image" accept="image/*" onchange="previewImage(event)">
+            </div>
+        </div>
+        <div id="image-preview-container" style="display: none;">
+            <h3>Image Preview:</h3>
+            <img id="image-preview" src="" alt="Image Preview" style="max-width: 200px; max-height: 200px;">
+        </div>
+
+        <div class="form1">
+            <div class="personalForm">
+                <h3>Personal Information</h3>
+
+                <label for="lname">Last Name</label>
+                <input type="text" id="lname" name="lname" placeholder="Last Name" required>
+            
+                <label for="fname">First Name</label>
+                <input type="text" id="fname" name="fname" placeholder="First Name" required>
+            
+                <label for="mname">Middle Name</label>
+                <input type="text" id="mname" name="mname" placeholder="Middle Name" required>
+
+                <label for="bdate">Birth Date</label>
+                <input type="date" id="bdate" name="bdate" placeholder="Birth Date" required>
+            
+                <label for="sex">Sex</label>
+                <select id="sex" name="sex" required>
+                    <option value="" disabled selected></option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                </select>
+            </div>
+    
+            <div class="contactForm">
+                <h3>Contact Information</h3>
+
+                <label for="contact">Contact Number</label>
+                <input type="number" id="contact" name="contact" placeholder="Primary Contact Number" required>
+            
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" placeholder="Email Address" required>
+
+                <label for="address">Address</label>
+                <input type="text" id="address" name="address" placeholder="Complete Address" required>
+            </div>
+        </div>
+        
+        <div class="form2">
+            <div class="employmentForm">
+                <h3>Employment Information</h3>
+                <label for="hiredate">Hire Date</label>
+                <input type="date" id="hiredate" name="hiredate" placeholder="Hire Date" required>
+            
+                <label for="position">Position</label>
+                <input type="text" id="position" name="position" placeholder="Position" required>
+
+            </div>
+                        
+            <div class="accountForm">
+                <h3>Account Information</h3>
+                <label for="employeeid">Employee ID</label>
+                <input type="text" id="employeeid" name="employeeid" placeholder="Enter Employee ID" required>
+        
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" placeholder="Password" required>
+                <label for="role">Account Role</label>
+                    <select id="role" name="role" required>
+                        <option value="" disabled selected>Type of User</option>
+                        <option value="employee">Employee</option>
+                        <option value="admin">Admin</option>
+                    </select>
+            </div>
+        </div>
+                        <div class="button-group">
+                            <button type="submit" id="submit" name="submit">Submit</button>
+                            <button type="button" onclick="hidepage()">Cancel</button>
+                        </div>
+                        <script> 
+                            document.getElementById('submit').addEventListener('click', function() {
+                                alert('Success! :D');
+                            });
+                        </script>
+                </form>
+              
+            
+        
+</div>
+    <script src="../javascript/loadcontents.js"></script>
+    <script>
+        function previewImage(event) {
+            const file = event.target.files[0];
+            const reader = new FileReader();
+            reader.onload = function() {
+                const imagePreview = document.getElementById('image-preview');
+                imagePreview.src = reader.result;
+                document.getElementById('image-preview-container').style.display = 'block';
+            }
+            if (file) {
+                reader.readAsDataURL(file);
+            }
+        }
+        function hidepage() {
+            window.location.href = "Personnel_Add.html";
+        }
+    </script>
+</div>
+</body>
+</html>

@@ -1,0 +1,55 @@
+/* now insert google fonts here */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;800&display=swap');
+*{
+    margin: 0;
+    padding: 0; 
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+}
+
+/*--------------this is the background----------------*/
+body{
+    width: 100%;
+    height: 100vh;
+    background-image: url(login.jpg);
+    background-size: cover ;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    position: relative;
+}
+.home-content p{
+    width: 75%;
+    line-height: 30px;
+    top: 35%;
+    left: 15%;
+    position: fixed;
+    text-align: justify;
+    letter-spacing: 3px;
+    color: #fff;
+}
+.home-img img{
+    position: absolute;
+    align-items: center;
+    top: 8%;
+    left: 43%;
+    width: 195px;
+    height: 195px;
+}
+.button1 {
+    position: absolute;
+    align-self: center;
+    top: 80%;
+    left: 44%;
+    padding: 0px 25px;
+    background: #fff;
+    border-radius: 20px;
+    font-size: 25px;
+    letter-spacing: 1px;
+    text-decoration: none;
+    font-weight: 100;
+    transition: .5s ease-in-out;
+}
+.button1:hover {
+    background-color: yellowgreen;
+    color: #fff;
+}

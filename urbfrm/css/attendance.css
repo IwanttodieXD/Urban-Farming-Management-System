@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/*--------------this is the background----------------*/
+body {
+    width: 100%;
+    height: 100vh;
+    background: #F5F5DC;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+header{
+    margin-bottom: 0.625rem;
+}
+.location {
+    background-color: #2E4A2E;
+    font-size: 1rem; /* 16px */
+    color: #74CD3C; /* Default color for "Plants" */
+    display: flex; /* Use flexbox for alignment */
+    justify-content: flex-end; /* Align content to the right */
+    border-radius: 0.625rem; /* 10px */
+}
+
+.currentlocation {
+    color: #cee2d2; /* Change this to your desired color for "Root Crops" */
+    margin-right: 0.625rem; /* 10px */
+}
+
+.info-container {
+    display: flex; /* Use Flexbox for alignment */
+    align-items: center; /* Center items vertically */
+    justify-content: center; /* Center items horizontally */
+    border-radius: 0.625rem; /* 10px */
+    margin-top: 0.625rem;
+}
+
+.text {
+    font-size: 1.5rem; 
+    margin-right: 0.625rem; 
+    color: white;
+}
+
+.info-image {
+    width: 4.375rem;    height: auto; 
+}
+
+.panelinfo {
+    display: flex; 
+    width: 100%;
+    background-color: #ccc;
+}
+.content{
+    margin-top: 10px;
+}
+.dateinput{
+    display: flex; 
+    align-items:center; 
+    background-color: #2E4A2E;
+    border-radius: 0.625rem; 
+    margin-top: 0.625rem;
+}
+.dateinput h1{
+    margin-left: 0.625rem;
+}
+.dateinput input{
+    margin-right: 0.625rem;
+}
+
+@media (max-width: 768px) {
+    table {
+        font-size: 0.9em; /* Smaller font size on medium screens */
+    }
+}
+
+@media (max-width: 480px) {
+    table {
+        font-size: 0.8em; /* Even smaller font size on small screens */
+    }
+}
+table {
+    width: 90%;
+    border-collapse: collapse;
+    margin-top: 10px; /* Space above the table */
+    margin: 0 auto;
+}
+
+th, td {
+    padding: 10px; /* Padding inside table cells */
+    text-align: left; /* Align text to the left */
+    border: 1px solid #ddd; /* Light border around cells */
+}
+
+th {
+    background-color: #2E4A2E; /* Green background for header */
+    color: white; /* White text for header */
+    font-weight: bold; /* Bold text for header */
+}
+
+td {
+    background-color: #fff; /* White background for data cells */
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+td:hover {
+    background-color: #e0e0e0; /* Change background on hover */
+}
+.dateinput {
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-between; /* Space between items */
+    align-items: center; /* Align items vertically centered */
+    margin-bottom: 20px; /* Space below the container */
+}
+
+.dateinput h1 {
+    margin: 0;
+    flex: 1;
+    color: #cee2d2;
+}
+
+.dateinput input[type="date"] {
+    margin-left: 10px;
+}
+
+.dateinput h3 {
+    margin: 0 10px; 
+    color: #cee2d2;
+}
+.tablediv{
+    text-align: center;
+}
+.button-done{
+    background-color: #4CAF50; 
+    color: white;
+    padding: 0.625rem 1.25rem; 
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1rem; 
+    margin: auto;
+    border-radius: 0.3125rem; 
+    cursor: pointer;
+}

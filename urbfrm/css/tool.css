@@ -1,0 +1,260 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+body {
+    width: 100%;
+    height: 100vh;
+    background: #F5F5DC;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+header{
+    margin-bottom: 0.625rem;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1.25rem; 
+}
+
+th, td {
+    text-align: center;
+    padding: 0.5rem; 
+    border: 1px solid #ddd;
+}
+
+th {
+    background-color: #2E4A2E; 
+    color: white;
+    font-size: 1rem;
+}
+td {
+    background-color: #fff; 
+    transition: background-color 0.3s; 
+    font-size: 1rem; 
+}
+
+td:hover {
+    background-color: #e0e0e0; 
+}
+
+.button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 0.625rem 1.25rem; 
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1rem; 
+    margin: 0.25rem; 
+    border-radius: 0.3125rem; 
+    cursor: pointer;
+}
+.content{
+    background-color: #F5F5DC;
+    margin-top: 0.625rem;
+}
+.table-container {
+    position: relative; 
+    margin: auto;
+}
+
+.button-add {
+    background-color: #008CBA; 
+    color: white; 
+    padding: 0.625rem 1.25rem; 
+    text-align: center; 
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1rem; 
+    border-radius: 0.3125rem; 
+    cursor: pointer; 
+    position: absolute; 
+    right: 0; 
+    top: 0; 
+    margin: 0.625rem; 
+}
+.button-view {
+    background-color: #008CBA; 
+    color: white; 
+    padding: 0.625rem 1.25rem; 
+    text-align: center; 
+    text-decoration: none; 
+    display: inline-block;
+    font-size: 1rem;
+    border-radius: 0.3125rem; 
+    cursor: pointer; 
+    position: absolute;
+    right: 0; 
+    top: 0;  
+    margin: 0.625rem; 
+}
+.button-edit, .button-delete {
+    background-color: #008CBA; 
+    color: white;
+    padding: 0.625rem 1.25rem; 
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1rem; 
+    margin: auto;
+    border-radius: 0.3125rem; 
+    cursor: pointer;
+}
+.button-cancel {
+    background-color: #f44336; 
+    color: white;
+    padding: 0.625rem 1.25rem; 
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1rem; 
+    margin: auto;
+    border-radius: 0.3125rem; 
+    cursor: pointer;
+}
+.button-done{
+    background-color: #4CAF50; 
+    color: white;
+    padding: 0.625rem 1.25rem; 
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1rem; 
+    margin: auto;
+    border-radius: 0.3125rem; 
+    cursor: pointer;
+}
+.button-delete {
+    background-color: #f44336;
+}
+
+.table-container {
+    margin: auto;
+}
+
+.container {
+    display: none; 
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #f9f9f9;
+    padding: 1.25rem; 
+    border: 1px solid #ccc;
+    z-index: 1000;
+    width: 40%;
+    margin: 50px auto;
+    border-radius: 0.3125rem; 
+}
+
+.overlay {
+    display: none; 
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+}
+
+.button {
+    margin: 0.3125rem; 
+}
+
+.form-group {
+    margin-bottom: 0.9375rem; 
+}
+
+label {
+    display: block;
+    margin-bottom: 0.3125 rem; 
+}
+
+input[type="text"],
+input[type="number"],
+textarea {
+    width: 100%;
+    padding: 0.625rem; 
+    margin-bottom: 0.9375rem; 
+    border: 1px solid #ccc;
+    border-radius: 0.1875rem; 
+    box-sizing: border-box;
+    font-size: 1rem; 
+}
+
+
+.panelinfo {
+    display: flex; 
+    width: 100%;
+    background-color: #ccc;
+}
+.content{
+    margin-top: 10px;
+}
+
+.child-90 {
+    flex: 9; 
+    background-color: #008CBA; 
+    color: white; 
+    padding: 1.25rem;
+}
+
+.child-10 {
+    flex: 1; 
+    background-color: #f44336; 
+    color: white; 
+    padding: 1.25rem; 
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .container {
+        width: 90%; 
+    }
+
+    .button {
+        width: 100%;
+        margin: 0.625rem 0; 
+    }
+
+    .table-container {
+        overflow-x: auto; 
+    }
+
+    .info-container {
+        flex-direction: column; 
+        align-items: flex-start; 
+    }
+
+    .text {
+        font-size: 1.25rem; 
+    }
+
+    .info-image {
+        width: 3.125rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .text {
+        font-size: 1.125rem; 
+    }
+
+    .button {
+        font-size: 0.875rem; 
+    }
+
+    th, td {
+        padding: 0.375rem; 
+    }
+}
